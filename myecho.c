@@ -10,14 +10,7 @@ int main (int ac, char* argv[]) {
 			flag = MODE_ON;
 	}
 
-	if (ac == 0) {
-		printf("\n");
-		return 0;	
-	}
-
-
 	if (ac >= 1) {
-
 		for (int i = 1 + flag; i < ac; i++) {
 			printf("%s", argv[i]);
 			if (i != ac-1)
