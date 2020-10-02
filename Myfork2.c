@@ -10,6 +10,7 @@
 
 int main (int argc, char** argv) {
     int status = 0;
+
     int number = 0;
     int pid = getpid();
 
