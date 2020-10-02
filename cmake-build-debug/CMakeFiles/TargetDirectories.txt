@@ -1,0 +1,3 @@
+/home/nikita/prog/sem3/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/nikita/prog/sem3/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/nikita/prog/sem3/cmake-build-debug/CMakeFiles/sem3.dir
