@@ -143,6 +143,33 @@ sem3/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sem3.dir/build.make CMakeFiles/sem3.dir/build
 .PHONY : sem3/fast
 
+Myco.o: Myco.c.o
+
+.PHONY : Myco.o
+
+# target to build an object file
+Myco.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sem3.dir/build.make CMakeFiles/sem3.dir/Myco.c.o
+.PHONY : Myco.c.o
+
+Myco.i: Myco.c.i
+
+.PHONY : Myco.i
+
+# target to preprocess a source file
+Myco.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sem3.dir/build.make CMakeFiles/sem3.dir/Myco.c.i
+.PHONY : Myco.c.i
+
+Myco.s: Myco.c.s
+
+.PHONY : Myco.s
+
+# target to generate assembly for a file
+Myco.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sem3.dir/build.make CMakeFiles/sem3.dir/Myco.c.s
+.PHONY : Myco.c.s
+
 Myfork.o: Myfork.c.o
 
 .PHONY : Myfork.o
@@ -260,6 +287,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... sem3"
+	@echo "... Myco.o"
+	@echo "... Myco.i"
+	@echo "... Myco.s"
 	@echo "... Myfork.o"
 	@echo "... Myfork.i"
 	@echo "... Myfork.s"

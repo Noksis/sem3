@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "/home/nikita/prog/sem3/Myco.c" "/home/nikita/prog/sem3/cmake-build-debug/CMakeFiles/sem3.dir/Myco.c.o"
   "/home/nikita/prog/sem3/Myfork.c" "/home/nikita/prog/sem3/cmake-build-debug/CMakeFiles/sem3.dir/Myfork.c.o"
   "/home/nikita/prog/sem3/Myfork2.c" "/home/nikita/prog/sem3/cmake-build-debug/CMakeFiles/sem3.dir/Myfork2.c.o"
   "/home/nikita/prog/sem3/myexec.c" "/home/nikita/prog/sem3/cmake-build-debug/CMakeFiles/sem3.dir/myexec.c.o"
