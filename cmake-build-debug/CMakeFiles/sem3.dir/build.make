@@ -103,18 +103,18 @@ CMakeFiles/sem3.dir/Myfork.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/sem3.dir/Myfork.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/nikita/prog/sem3/Myfork.c -o CMakeFiles/sem3.dir/Myfork.c.s
 
-CMakeFiles/sem3.dir/myexec.c.o: CMakeFiles/sem3.dir/flags.make
-CMakeFiles/sem3.dir/myexec.c.o: ../myexec.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nikita/prog/sem3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/sem3.dir/myexec.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/sem3.dir/myexec.c.o   -c /home/nikita/prog/sem3/myexec.c
+CMakeFiles/sem3.dir/MyTme.c.o: CMakeFiles/sem3.dir/flags.make
+CMakeFiles/sem3.dir/MyTme.c.o: ../MyTme.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nikita/prog/sem3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/sem3.dir/MyTme.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/sem3.dir/MyTme.c.o   -c /home/nikita/prog/sem3/MyTme.c
 
-CMakeFiles/sem3.dir/myexec.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/sem3.dir/myexec.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/nikita/prog/sem3/myexec.c > CMakeFiles/sem3.dir/myexec.c.i
+CMakeFiles/sem3.dir/MyTme.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/sem3.dir/MyTme.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/nikita/prog/sem3/MyTme.c > CMakeFiles/sem3.dir/MyTme.c.i
 
-CMakeFiles/sem3.dir/myexec.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/sem3.dir/myexec.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/nikita/prog/sem3/myexec.c -o CMakeFiles/sem3.dir/myexec.c.s
+CMakeFiles/sem3.dir/MyTme.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/sem3.dir/MyTme.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/nikita/prog/sem3/MyTme.c -o CMakeFiles/sem3.dir/MyTme.c.s
 
 CMakeFiles/sem3.dir/Myfork2.c.o: CMakeFiles/sem3.dir/flags.make
 CMakeFiles/sem3.dir/Myfork2.c.o: ../Myfork2.c
@@ -146,7 +146,7 @@ CMakeFiles/sem3.dir/Myco.c.s: cmake_force
 sem3_OBJECTS = \
 "CMakeFiles/sem3.dir/main.cpp.o" \
 "CMakeFiles/sem3.dir/Myfork.c.o" \
-"CMakeFiles/sem3.dir/myexec.c.o" \
+"CMakeFiles/sem3.dir/MyTme.c.o" \
 "CMakeFiles/sem3.dir/Myfork2.c.o" \
 "CMakeFiles/sem3.dir/Myco.c.o"
 
@@ -155,7 +155,7 @@ sem3_EXTERNAL_OBJECTS =
 
 sem3: CMakeFiles/sem3.dir/main.cpp.o
 sem3: CMakeFiles/sem3.dir/Myfork.c.o
-sem3: CMakeFiles/sem3.dir/myexec.c.o
+sem3: CMakeFiles/sem3.dir/MyTme.c.o
 sem3: CMakeFiles/sem3.dir/Myfork2.c.o
 sem3: CMakeFiles/sem3.dir/Myco.c.o
 sem3: CMakeFiles/sem3.dir/build.make

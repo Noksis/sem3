@@ -143,6 +143,33 @@ sem3/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sem3.dir/build.make CMakeFiles/sem3.dir/build
 .PHONY : sem3/fast
 
+MyTme.o: MyTme.c.o
+
+.PHONY : MyTme.o
+
+# target to build an object file
+MyTme.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sem3.dir/build.make CMakeFiles/sem3.dir/MyTme.c.o
+.PHONY : MyTme.c.o
+
+MyTme.i: MyTme.c.i
+
+.PHONY : MyTme.i
+
+# target to preprocess a source file
+MyTme.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sem3.dir/build.make CMakeFiles/sem3.dir/MyTme.c.i
+.PHONY : MyTme.c.i
+
+MyTme.s: MyTme.c.s
+
+.PHONY : MyTme.s
+
+# target to generate assembly for a file
+MyTme.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sem3.dir/build.make CMakeFiles/sem3.dir/MyTme.c.s
+.PHONY : MyTme.c.s
+
 Myco.o: Myco.c.o
 
 .PHONY : Myco.o
@@ -251,33 +278,6 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sem3.dir/build.make CMakeFiles/sem3.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-myexec.o: myexec.c.o
-
-.PHONY : myexec.o
-
-# target to build an object file
-myexec.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sem3.dir/build.make CMakeFiles/sem3.dir/myexec.c.o
-.PHONY : myexec.c.o
-
-myexec.i: myexec.c.i
-
-.PHONY : myexec.i
-
-# target to preprocess a source file
-myexec.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sem3.dir/build.make CMakeFiles/sem3.dir/myexec.c.i
-.PHONY : myexec.c.i
-
-myexec.s: myexec.c.s
-
-.PHONY : myexec.s
-
-# target to generate assembly for a file
-myexec.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sem3.dir/build.make CMakeFiles/sem3.dir/myexec.c.s
-.PHONY : myexec.c.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -287,6 +287,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... sem3"
+	@echo "... MyTme.o"
+	@echo "... MyTme.i"
+	@echo "... MyTme.s"
 	@echo "... Myco.o"
 	@echo "... Myco.i"
 	@echo "... Myco.s"
@@ -299,9 +302,6 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... myexec.o"
-	@echo "... myexec.i"
-	@echo "... myexec.s"
 .PHONY : help
 
 
