@@ -82,19 +82,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/nikita/prog/sem3/MyTme.c">
-			<Option target="sem3"/>
-		</Unit>
 		<Unit filename="/home/nikita/prog/sem3/Myco.c">
-			<Option target="sem3"/>
-		</Unit>
-		<Unit filename="/home/nikita/prog/sem3/Myfork.c">
-			<Option target="sem3"/>
-		</Unit>
-		<Unit filename="/home/nikita/prog/sem3/Myfork2.c">
-			<Option target="sem3"/>
-		</Unit>
-		<Unit filename="/home/nikita/prog/sem3/main.cpp">
 			<Option target="sem3"/>
 		</Unit>
 		<Unit filename="/home/nikita/prog/sem3/CMakeLists.txt">

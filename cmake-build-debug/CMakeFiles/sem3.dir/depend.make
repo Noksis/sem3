@@ -3,11 +3,3 @@
 
 CMakeFiles/sem3.dir/Myco.c.o: ../Myco.c
 
-CMakeFiles/sem3.dir/Myfork.c.o: ../Myfork.c
-
-CMakeFiles/sem3.dir/Myfork2.c.o: ../Myfork2.c
-
-CMakeFiles/sem3.dir/myexec.c.o: ../myexec.c
-
-CMakeFiles/sem3.dir/main.cpp.o: ../main.cpp
-

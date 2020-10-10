@@ -143,33 +143,6 @@ sem3/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sem3.dir/build.make CMakeFiles/sem3.dir/build
 .PHONY : sem3/fast
 
-MyTme.o: MyTme.c.o
-
-.PHONY : MyTme.o
-
-# target to build an object file
-MyTme.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sem3.dir/build.make CMakeFiles/sem3.dir/MyTme.c.o
-.PHONY : MyTme.c.o
-
-MyTme.i: MyTme.c.i
-
-.PHONY : MyTme.i
-
-# target to preprocess a source file
-MyTme.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sem3.dir/build.make CMakeFiles/sem3.dir/MyTme.c.i
-.PHONY : MyTme.c.i
-
-MyTme.s: MyTme.c.s
-
-.PHONY : MyTme.s
-
-# target to generate assembly for a file
-MyTme.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sem3.dir/build.make CMakeFiles/sem3.dir/MyTme.c.s
-.PHONY : MyTme.c.s
-
 Myco.o: Myco.c.o
 
 .PHONY : Myco.o
@@ -197,87 +170,6 @@ Myco.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sem3.dir/build.make CMakeFiles/sem3.dir/Myco.c.s
 .PHONY : Myco.c.s
 
-Myfork.o: Myfork.c.o
-
-.PHONY : Myfork.o
-
-# target to build an object file
-Myfork.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sem3.dir/build.make CMakeFiles/sem3.dir/Myfork.c.o
-.PHONY : Myfork.c.o
-
-Myfork.i: Myfork.c.i
-
-.PHONY : Myfork.i
-
-# target to preprocess a source file
-Myfork.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sem3.dir/build.make CMakeFiles/sem3.dir/Myfork.c.i
-.PHONY : Myfork.c.i
-
-Myfork.s: Myfork.c.s
-
-.PHONY : Myfork.s
-
-# target to generate assembly for a file
-Myfork.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sem3.dir/build.make CMakeFiles/sem3.dir/Myfork.c.s
-.PHONY : Myfork.c.s
-
-Myfork2.o: Myfork2.c.o
-
-.PHONY : Myfork2.o
-
-# target to build an object file
-Myfork2.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sem3.dir/build.make CMakeFiles/sem3.dir/Myfork2.c.o
-.PHONY : Myfork2.c.o
-
-Myfork2.i: Myfork2.c.i
-
-.PHONY : Myfork2.i
-
-# target to preprocess a source file
-Myfork2.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sem3.dir/build.make CMakeFiles/sem3.dir/Myfork2.c.i
-.PHONY : Myfork2.c.i
-
-Myfork2.s: Myfork2.c.s
-
-.PHONY : Myfork2.s
-
-# target to generate assembly for a file
-Myfork2.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sem3.dir/build.make CMakeFiles/sem3.dir/Myfork2.c.s
-.PHONY : Myfork2.c.s
-
-main.o: main.cpp.o
-
-.PHONY : main.o
-
-# target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sem3.dir/build.make CMakeFiles/sem3.dir/main.cpp.o
-.PHONY : main.cpp.o
-
-main.i: main.cpp.i
-
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sem3.dir/build.make CMakeFiles/sem3.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sem3.dir/build.make CMakeFiles/sem3.dir/main.cpp.s
-.PHONY : main.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -287,21 +179,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... sem3"
-	@echo "... MyTme.o"
-	@echo "... MyTme.i"
-	@echo "... MyTme.s"
 	@echo "... Myco.o"
 	@echo "... Myco.i"
 	@echo "... Myco.s"
-	@echo "... Myfork.o"
-	@echo "... Myfork.i"
-	@echo "... Myfork.s"
-	@echo "... Myfork2.o"
-	@echo "... Myfork2.i"
-	@echo "... Myfork2.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
 .PHONY : help
 
 

@@ -6,35 +6,3 @@
 
 #IncludeRegexTransform: 
 
-/home/nikita/prog/sem3/Myco.c
-stdio.h
--
-unistd.h
--
-stdlib.h
--
-getopt.h
--
-
-/home/nikita/prog/sem3/myexec.c
-stdio.h
--
-unistd.h
--
-sys/wait.h
--
-assert.h
--
-stdlib.h
--
-sys/time.h
--
-time.h
--
-errno.h
--
-ctype.h
--
-fcntl.h
--
-
