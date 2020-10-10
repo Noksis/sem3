@@ -41,48 +41,59 @@ int my_read (int fd, char* buf, int len){
 }
 
 int copy (char** argv, int i, int flag ) {
+
     int fd = 0;
     char *buf;
     int bits = 0;
 
     buf =  calloc(MAX_SIZE, sizeof(char));
-
     fd = open(argv[i+1],O_RDONLY);
-    printf("argv for read is %s\n", argv[i+1]);
-    printf("Fd reading file is %d\n", fd);
 
     if (fd == -1) {
         perror("Open file to read");
         return -1;
     }
 
+    //Reading file
     bits = my_read (fd,buf, MAX_SIZE);
-    printf ("buf is %s\n", buf);
 
     if (bits == -1)
         return -1;
 
+    //Close reading file
     if (close(fd) == -1 )
         perror("Close file to read");
 
+
+    //Option to write to file:
+    // 0 - common
+    // 1 - interactive
+    // 2 - force
     if (flag == 2){
-        if (open(argv[i+2], O_EXCL | O_CREAT | O_WRONLY) == -1) {
-            remove(argv[i+2]);
-            printf("remove is %s", argv[i+2]);
-            fd = open(argv[i+2],O_WRONLY | O_CREAT | O_EXCL);
+
+        fd = open(argv[i+2], O_EXCL | O_CREAT | O_WRONLY,S_IRWXU);
+
+        if ( fd == -1) {
+
+            if(remove(argv[i+2]) == -1)
+                perror("Remove fail");
+
+            fd = open(argv[i+2],O_WRONLY | O_CREAT | O_EXCL,S_IRWXU);
+
             if (fd == -1)
                 perror("new file ?");
         }
-        else
-            fd = open(argv[i+2],O_WRONLY & O_TRUNC);
     }
 
     else if (flag == 0) {
         fd = open(argv[i+2],O_WRONLY | O_TRUNC);
+        if(fd == -1)
+            perror("Open file to write");
     }
 
     else if (flag == 1) {
-        if (fd = open(argv[i+2],O_WRONLY | O_EXCL) == -1){
+        fd = open(argv[i+2],O_WRONLY | O_CREAT | O_EXCL,S_IRWXU);
+        if (fd == -1){
             char choice = 0;
             printf("You are rewrite file %s\n"
                    "Accept you choice [Y\\N]???\n", *argv );
@@ -90,10 +101,10 @@ int copy (char** argv, int i, int flag ) {
             if (choice == 'y' || choice == 'Y') {
                 fd = open(argv[i+2],O_WRONLY | O_TRUNC);
             }
-            else
+            else {
+                printf("You are not rewrite file, close prog...\n");
                 return 0;
-
-
+            }
         }
     }
 
@@ -102,9 +113,11 @@ int copy (char** argv, int i, int flag ) {
         return -1;
     }
 
+    //Write to file
     if (write(fd,buf,bits) == -1)
         perror("Write");
 
+    //Close file
     if (close(fd) == -1 )
         perror("Close file to read");
 
@@ -141,10 +154,9 @@ int main (int argc, char** argv) {
                 break;
             }
             default:
-                printf("flag is [%d] and i is [%d]\n", flag, i);
+                //Copy files
                 copy(argv, i, flag);
                 return 0;
         }
     }
-
 }
