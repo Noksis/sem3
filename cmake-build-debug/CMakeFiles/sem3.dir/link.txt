@@ -1,1 +1,1 @@
-/usr/bin/cc -g   CMakeFiles/sem3.dir/Myco.c.o  -o sem3 
+/usr/bin/cc -g   CMakeFiles/sem3.dir/MyTme.c.o  -o sem3 

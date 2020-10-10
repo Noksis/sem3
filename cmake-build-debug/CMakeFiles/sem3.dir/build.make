@@ -77,27 +77,27 @@ include CMakeFiles/sem3.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/sem3.dir/flags.make
 
-CMakeFiles/sem3.dir/Myco.c.o: CMakeFiles/sem3.dir/flags.make
-CMakeFiles/sem3.dir/Myco.c.o: ../Myco.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nikita/prog/sem3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/sem3.dir/Myco.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/sem3.dir/Myco.c.o   -c /home/nikita/prog/sem3/Myco.c
+CMakeFiles/sem3.dir/MyTme.c.o: CMakeFiles/sem3.dir/flags.make
+CMakeFiles/sem3.dir/MyTme.c.o: ../MyTme.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nikita/prog/sem3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/sem3.dir/MyTme.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/sem3.dir/MyTme.c.o   -c /home/nikita/prog/sem3/MyTme.c
 
-CMakeFiles/sem3.dir/Myco.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/sem3.dir/Myco.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/nikita/prog/sem3/Myco.c > CMakeFiles/sem3.dir/Myco.c.i
+CMakeFiles/sem3.dir/MyTme.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/sem3.dir/MyTme.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/nikita/prog/sem3/MyTme.c > CMakeFiles/sem3.dir/MyTme.c.i
 
-CMakeFiles/sem3.dir/Myco.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/sem3.dir/Myco.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/nikita/prog/sem3/Myco.c -o CMakeFiles/sem3.dir/Myco.c.s
+CMakeFiles/sem3.dir/MyTme.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/sem3.dir/MyTme.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/nikita/prog/sem3/MyTme.c -o CMakeFiles/sem3.dir/MyTme.c.s
 
 # Object files for target sem3
 sem3_OBJECTS = \
-"CMakeFiles/sem3.dir/Myco.c.o"
+"CMakeFiles/sem3.dir/MyTme.c.o"
 
 # External object files for target sem3
 sem3_EXTERNAL_OBJECTS =
 
-sem3: CMakeFiles/sem3.dir/Myco.c.o
+sem3: CMakeFiles/sem3.dir/MyTme.c.o
 sem3: CMakeFiles/sem3.dir/build.make
 sem3: CMakeFiles/sem3.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nikita/prog/sem3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable sem3"

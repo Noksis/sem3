@@ -3,4 +3,4 @@ project(sem3)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(sem3 Mycp.c)
+add_executable(sem3 MyTime.c)

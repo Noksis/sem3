@@ -82,7 +82,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/nikita/prog/sem3/Myco.c">
+		<Unit filename="/home/nikita/prog/sem3/MyTme.c">
 			<Option target="sem3"/>
 		</Unit>
 		<Unit filename="/home/nikita/prog/sem3/CMakeLists.txt">
