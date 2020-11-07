@@ -77,30 +77,75 @@ include CMakeFiles/sem3.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/sem3.dir/flags.make
 
-CMakeFiles/sem3.dir/MyTme.c.o: CMakeFiles/sem3.dir/flags.make
-CMakeFiles/sem3.dir/MyTme.c.o: ../MyTme.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nikita/prog/sem3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/sem3.dir/MyTme.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/sem3.dir/MyTme.c.o   -c /home/nikita/prog/sem3/MyTme.c
+CMakeFiles/sem3.dir/MyRuns.c.o: CMakeFiles/sem3.dir/flags.make
+CMakeFiles/sem3.dir/MyRuns.c.o: ../MyRuns.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nikita/prog/sem3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/sem3.dir/MyRuns.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/sem3.dir/MyRuns.c.o   -c /home/nikita/prog/sem3/MyRuns.c
 
-CMakeFiles/sem3.dir/MyTme.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/sem3.dir/MyTme.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/nikita/prog/sem3/MyTme.c > CMakeFiles/sem3.dir/MyTme.c.i
+CMakeFiles/sem3.dir/MyRuns.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/sem3.dir/MyRuns.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/nikita/prog/sem3/MyRuns.c > CMakeFiles/sem3.dir/MyRuns.c.i
 
-CMakeFiles/sem3.dir/MyTme.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/sem3.dir/MyTme.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/nikita/prog/sem3/MyTme.c -o CMakeFiles/sem3.dir/MyTme.c.s
+CMakeFiles/sem3.dir/MyRuns.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/sem3.dir/MyRuns.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/nikita/prog/sem3/MyRuns.c -o CMakeFiles/sem3.dir/MyRuns.c.s
+
+CMakeFiles/sem3.dir/server.c.o: CMakeFiles/sem3.dir/flags.make
+CMakeFiles/sem3.dir/server.c.o: ../server.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nikita/prog/sem3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/sem3.dir/server.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/sem3.dir/server.c.o   -c /home/nikita/prog/sem3/server.c
+
+CMakeFiles/sem3.dir/server.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/sem3.dir/server.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/nikita/prog/sem3/server.c > CMakeFiles/sem3.dir/server.c.i
+
+CMakeFiles/sem3.dir/server.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/sem3.dir/server.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/nikita/prog/sem3/server.c -o CMakeFiles/sem3.dir/server.c.s
+
+CMakeFiles/sem3.dir/client.c.o: CMakeFiles/sem3.dir/flags.make
+CMakeFiles/sem3.dir/client.c.o: ../client.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nikita/prog/sem3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/sem3.dir/client.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/sem3.dir/client.c.o   -c /home/nikita/prog/sem3/client.c
+
+CMakeFiles/sem3.dir/client.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/sem3.dir/client.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/nikita/prog/sem3/client.c > CMakeFiles/sem3.dir/client.c.i
+
+CMakeFiles/sem3.dir/client.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/sem3.dir/client.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/nikita/prog/sem3/client.c -o CMakeFiles/sem3.dir/client.c.s
+
+CMakeFiles/sem3.dir/count.c.o: CMakeFiles/sem3.dir/flags.make
+CMakeFiles/sem3.dir/count.c.o: ../count.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nikita/prog/sem3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/sem3.dir/count.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/sem3.dir/count.c.o   -c /home/nikita/prog/sem3/count.c
+
+CMakeFiles/sem3.dir/count.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/sem3.dir/count.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/nikita/prog/sem3/count.c > CMakeFiles/sem3.dir/count.c.i
+
+CMakeFiles/sem3.dir/count.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/sem3.dir/count.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/nikita/prog/sem3/count.c -o CMakeFiles/sem3.dir/count.c.s
 
 # Object files for target sem3
 sem3_OBJECTS = \
-"CMakeFiles/sem3.dir/MyTme.c.o"
+"CMakeFiles/sem3.dir/MyRuns.c.o" \
+"CMakeFiles/sem3.dir/server.c.o" \
+"CMakeFiles/sem3.dir/client.c.o" \
+"CMakeFiles/sem3.dir/count.c.o"
 
 # External object files for target sem3
 sem3_EXTERNAL_OBJECTS =
 
-sem3: CMakeFiles/sem3.dir/MyTme.c.o
+sem3: CMakeFiles/sem3.dir/MyRuns.c.o
+sem3: CMakeFiles/sem3.dir/server.c.o
+sem3: CMakeFiles/sem3.dir/client.c.o
+sem3: CMakeFiles/sem3.dir/count.c.o
 sem3: CMakeFiles/sem3.dir/build.make
 sem3: CMakeFiles/sem3.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nikita/prog/sem3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable sem3"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nikita/prog/sem3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable sem3"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sem3.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

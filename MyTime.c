@@ -4,9 +4,7 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <sys/wait.h>
-#include <assert.h>
 #include <stdlib.h>
-#include <sys/time.h>
 #include <time.h>
 #include <errno.h>
 #include <ctype.h>
@@ -16,7 +14,7 @@
 const int fd_stdout = 1;
 const int fd_stdin = 2;
 const int count = 1000;
-const int MAX_SIZE = 1000;
+const int MAX_SIZE = 10000000;
 
 
 struct timespec start, final;
@@ -45,7 +43,6 @@ int my_read (int fd, char* buf, int len){
     }
     return bits;
 }
-
 
 void count_words (char* buf, int count) {
     int sum = 0;
@@ -120,9 +117,6 @@ int main (int argc, char** argv) {
         exit(0);
     }
 
-    //Wait child
-    wait(NULL);
-
     //Close pipe to write
     close(pipefd[1]);
 
@@ -131,6 +125,8 @@ int main (int argc, char** argv) {
 
     //Write to stdout
     write(fd_stdout,buf,bite_size);
+
+    wait(NULL);
 
     //Print bits
     printf("\nBite_size is [%lu]\n",bite_size);

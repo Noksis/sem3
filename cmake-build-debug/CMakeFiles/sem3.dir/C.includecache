@@ -6,27 +6,23 @@
 
 #IncludeRegexTransform: 
 
-/home/nikita/prog/sem3/MyTme.c
-stdio.h
--
+/home/nikita/prog/sem3/MyRuns.c
 unistd.h
 -
-sys/wait.h
+stdio.h
 -
-assert.h
+pwd.h
 -
-stdlib.h
--
-sys/time.h
+grp.h
 -
 time.h
 -
-errno.h
+stdlib.h
 -
-ctype.h
--
-fcntl.h
+assert.h
 -
 string.h
+-
+sys/msg.h
 -
 

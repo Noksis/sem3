@@ -143,32 +143,113 @@ sem3/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sem3.dir/build.make CMakeFiles/sem3.dir/build
 .PHONY : sem3/fast
 
-MyTme.o: MyTme.c.o
+MyRuns.o: MyRuns.c.o
 
-.PHONY : MyTme.o
+.PHONY : MyRuns.o
 
 # target to build an object file
-MyTme.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sem3.dir/build.make CMakeFiles/sem3.dir/MyTme.c.o
-.PHONY : MyTme.c.o
+MyRuns.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sem3.dir/build.make CMakeFiles/sem3.dir/MyRuns.c.o
+.PHONY : MyRuns.c.o
 
-MyTme.i: MyTme.c.i
+MyRuns.i: MyRuns.c.i
 
-.PHONY : MyTme.i
+.PHONY : MyRuns.i
 
 # target to preprocess a source file
-MyTme.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sem3.dir/build.make CMakeFiles/sem3.dir/MyTme.c.i
-.PHONY : MyTme.c.i
+MyRuns.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sem3.dir/build.make CMakeFiles/sem3.dir/MyRuns.c.i
+.PHONY : MyRuns.c.i
 
-MyTme.s: MyTme.c.s
+MyRuns.s: MyRuns.c.s
 
-.PHONY : MyTme.s
+.PHONY : MyRuns.s
 
 # target to generate assembly for a file
-MyTme.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sem3.dir/build.make CMakeFiles/sem3.dir/MyTme.c.s
-.PHONY : MyTme.c.s
+MyRuns.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sem3.dir/build.make CMakeFiles/sem3.dir/MyRuns.c.s
+.PHONY : MyRuns.c.s
+
+client.o: client.c.o
+
+.PHONY : client.o
+
+# target to build an object file
+client.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sem3.dir/build.make CMakeFiles/sem3.dir/client.c.o
+.PHONY : client.c.o
+
+client.i: client.c.i
+
+.PHONY : client.i
+
+# target to preprocess a source file
+client.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sem3.dir/build.make CMakeFiles/sem3.dir/client.c.i
+.PHONY : client.c.i
+
+client.s: client.c.s
+
+.PHONY : client.s
+
+# target to generate assembly for a file
+client.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sem3.dir/build.make CMakeFiles/sem3.dir/client.c.s
+.PHONY : client.c.s
+
+count.o: count.c.o
+
+.PHONY : count.o
+
+# target to build an object file
+count.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sem3.dir/build.make CMakeFiles/sem3.dir/count.c.o
+.PHONY : count.c.o
+
+count.i: count.c.i
+
+.PHONY : count.i
+
+# target to preprocess a source file
+count.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sem3.dir/build.make CMakeFiles/sem3.dir/count.c.i
+.PHONY : count.c.i
+
+count.s: count.c.s
+
+.PHONY : count.s
+
+# target to generate assembly for a file
+count.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sem3.dir/build.make CMakeFiles/sem3.dir/count.c.s
+.PHONY : count.c.s
+
+server.o: server.c.o
+
+.PHONY : server.o
+
+# target to build an object file
+server.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sem3.dir/build.make CMakeFiles/sem3.dir/server.c.o
+.PHONY : server.c.o
+
+server.i: server.c.i
+
+.PHONY : server.i
+
+# target to preprocess a source file
+server.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sem3.dir/build.make CMakeFiles/sem3.dir/server.c.i
+.PHONY : server.c.i
+
+server.s: server.c.s
+
+.PHONY : server.s
+
+# target to generate assembly for a file
+server.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sem3.dir/build.make CMakeFiles/sem3.dir/server.c.s
+.PHONY : server.c.s
 
 # Help Target
 help:
@@ -179,9 +260,18 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... sem3"
-	@echo "... MyTme.o"
-	@echo "... MyTme.i"
-	@echo "... MyTme.s"
+	@echo "... MyRuns.o"
+	@echo "... MyRuns.i"
+	@echo "... MyRuns.s"
+	@echo "... client.o"
+	@echo "... client.i"
+	@echo "... client.s"
+	@echo "... count.o"
+	@echo "... count.i"
+	@echo "... count.s"
+	@echo "... server.o"
+	@echo "... server.i"
+	@echo "... server.s"
 .PHONY : help
 
 

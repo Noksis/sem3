@@ -3,4 +3,4 @@ project(sem3)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(sem3 MyTime.c)
+add_executable(sem3 MyRuns.c server.c client.c count.c)

@@ -4,7 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/nikita/prog/sem3/MyTme.c" "/home/nikita/prog/sem3/cmake-build-debug/CMakeFiles/sem3.dir/MyTme.c.o"
+  "/home/nikita/prog/sem3/MyRuns.c" "/home/nikita/prog/sem3/cmake-build-debug/CMakeFiles/sem3.dir/MyRuns.c.o"
+  "/home/nikita/prog/sem3/client.c" "/home/nikita/prog/sem3/cmake-build-debug/CMakeFiles/sem3.dir/client.c.o"
+  "/home/nikita/prog/sem3/count.c" "/home/nikita/prog/sem3/cmake-build-debug/CMakeFiles/sem3.dir/count.c.o"
+  "/home/nikita/prog/sem3/server.c" "/home/nikita/prog/sem3/cmake-build-debug/CMakeFiles/sem3.dir/server.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

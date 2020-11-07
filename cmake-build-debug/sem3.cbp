@@ -82,7 +82,16 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/nikita/prog/sem3/MyTme.c">
+		<Unit filename="/home/nikita/prog/sem3/MyRuns.c">
+			<Option target="sem3"/>
+		</Unit>
+		<Unit filename="/home/nikita/prog/sem3/client.c">
+			<Option target="sem3"/>
+		</Unit>
+		<Unit filename="/home/nikita/prog/sem3/count.c">
+			<Option target="sem3"/>
+		</Unit>
+		<Unit filename="/home/nikita/prog/sem3/server.c">
 			<Option target="sem3"/>
 		</Unit>
 		<Unit filename="/home/nikita/prog/sem3/CMakeLists.txt">
