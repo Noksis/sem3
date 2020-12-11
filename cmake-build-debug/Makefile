@@ -143,6 +143,33 @@ sem3/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sem3.dir/build.make CMakeFiles/sem3.dir/build
 .PHONY : sem3/fast
 
+Boat.o: Boat.c.o
+
+.PHONY : Boat.o
+
+# target to build an object file
+Boat.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sem3.dir/build.make CMakeFiles/sem3.dir/Boat.c.o
+.PHONY : Boat.c.o
+
+Boat.i: Boat.c.i
+
+.PHONY : Boat.i
+
+# target to preprocess a source file
+Boat.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sem3.dir/build.make CMakeFiles/sem3.dir/Boat.c.i
+.PHONY : Boat.c.i
+
+Boat.s: Boat.c.s
+
+.PHONY : Boat.s
+
+# target to generate assembly for a file
+Boat.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sem3.dir/build.make CMakeFiles/sem3.dir/Boat.c.s
+.PHONY : Boat.c.s
+
 MyRuns.o: MyRuns.c.o
 
 .PHONY : MyRuns.o
@@ -260,6 +287,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... sem3"
+	@echo "... Boat.o"
+	@echo "... Boat.i"
+	@echo "... Boat.s"
 	@echo "... MyRuns.o"
 	@echo "... MyRuns.i"
 	@echo "... MyRuns.s"

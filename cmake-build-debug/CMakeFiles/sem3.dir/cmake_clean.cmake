@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/sem3.dir/Boat.c.o"
   "CMakeFiles/sem3.dir/MyRuns.c.o"
   "CMakeFiles/sem3.dir/client.c.o"
   "CMakeFiles/sem3.dir/count.c.o"

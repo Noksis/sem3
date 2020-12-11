@@ -14,6 +14,7 @@
 #include <sys/msg.h>
 const int size_buf = 1024;
 const long start_race = 1000;
+const long num_end = 999999;
 
 struct timespec starting, final;
 
@@ -45,7 +46,7 @@ int judge (int N, int ID) {
     printf("Daddy is here!\n");
 
     //Accept sportsmen
-    for (int i =1; i < N+1; i++) {
+    for (int i = 1; i < N+1; i++) {
         if(msgrcv(ID, &output, 0, i, 0) == -1)
             perror("Accept sportsmen\n");
 
@@ -77,7 +78,7 @@ int judge (int N, int ID) {
 
 
     //Finish run
-    if(msgrcv(ID, &end, 0, N, 0) == -1)
+    if(msgrcv(ID, &end, 0, num_end, 0) == -1)
         perror("Finish run judge");
     printf("Okey boys! Finish race.\n");
 
@@ -125,9 +126,9 @@ int runner (int N, int ID, int number) {
 
     //Finish run
     if (number == N) {
-        end.mtype = N;
+        end.mtype = num_end;
 
-        if (msgrcv(ID, &getstick, 0, N, 0) == -1)
+        if (msgrcv(ID, &getstick, 0, number, 0) == -1)
             perror("getstick");
 
         printf("I get stick! My number is [%d]\n", number);
@@ -149,13 +150,11 @@ int main (int argc, char** argv) {
     setvbuf(stdout, buf , _IOLBF, size_buf );
 
     int pid = 0;
-    int N = 3;
+    int N = atoi(argv[1]);
     int ID = 0;
 
     printf("Create queue\n");
     ID = msgget(IPC_PRIVATE,S_IRWXU);
-
-
 
     int i = 1;
     for (i = 1; i < N+1; i++) {
@@ -164,16 +163,20 @@ int main (int argc, char** argv) {
             break;
     }
 
-    if (pid != 0)
+    if (pid != 0) {
         judge(N, ID);
+        wait(NULL);
+        msgctl(ID,IPC_RMID,NULL);
+    }
+
 
     //if i am child
     if (pid == 0) {
         printf("Runner [%d] is create\n", i);
         runner(N, ID, i);
     }
-    wait(NULL);
-    msgctl(ID,IPC_RMID,NULL);
+
+
 
     return 0;
 }
