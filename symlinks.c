@@ -20,32 +20,36 @@ static struct option long_opt[] = {
 
 int find (char* path, int flag, char* name){
     DIR* dir = opendir(path);
+
     struct dirent* entry = readdir(dir);
-    struct stat* info;
+    struct stat info;
     char pathName[PATH_MAX];
 
     if (dir == NULL)
         perror("Problem with open file!");
 
     while (entry != NULL){
-
         (void)strncpy( pathName, path, PATH_MAX );
         (void)strncat( pathName, "/", 1024 );
         (void)strncat( pathName, entry->d_name, PATH_MAX );
 
-        if (stat(pathName,info) < 0)
+        if (stat(pathName,&info) < 0)
             perror("Problem with stat");
+
         if (flag == 1)
-            if (S_ISDIR(info->st_mode) == 1)
+            //printf("%d",info->st_mode);
+            if (S_ISDIR(info.st_mode) == 1)
                 find(pathName,flag, name);
 
-        if (flag != 2)
-            printf("%s \n", pathName);
-        else
+        if (flag == 2)
             if(strcmp(pathName,name) == 1) {
                 printf("%s \n", pathName);
                 return 0;
             }
+
+        if (flag == 0)
+            printf("%s \n", pathName);
+
         entry = readdir(dir);
     }
     closedir(dir);
@@ -55,6 +59,7 @@ int find (char* path, int flag, char* name){
 int main(int argc, char** argv) {
     char* path = argv[1];
     char* name = argv[2];
+    struct stat* info;
 
     if (argc == 1){
         printf("Error! No arguments!\n");
