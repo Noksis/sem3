@@ -5,6 +5,8 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include <stdlib.h>
+#include <sys/types.h>
+#include <dirent.h>
 #include <getopt.h>
 
 static struct option long_opt[] = {
@@ -12,6 +14,23 @@ static struct option long_opt[] = {
         {"name",0,0,'n'},
         {0,0,0,0}
 };
+
+int find (char* path){
+    DIR* dir = opendir(path);
+    struct dirent* entry = readdir(dir);
+    if (dir == NULL)
+        perror("Problem with open file!");
+
+    while (entry != NULL){
+        printf("%s",entry->d_name);
+        entry = readdir(dir);
+    }
+
+
+    printf("%s\n",path);
+
+    closedir(dir);
+}
 
 int main(int argc, char** argv) {
     char* path = argv[1];
@@ -38,7 +57,7 @@ int main(int argc, char** argv) {
                 break;
             }
             default:
-                //Find
+                find(path);
                 return 0;
         }
     }
