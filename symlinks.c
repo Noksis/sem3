@@ -2,27 +2,41 @@
 // Created by nikita on 12.12.2020.
 //
 #include <stdio.h>
-#include <fcntl.h>
-#include <unistd.h>
 #include <stdlib.h>
-#include <sys/types.h>
-#include <dirent.h>
+#include <errno.h>
+#include <string.h>
+#include <limits.h>
 #include <getopt.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <dirent.h>
+#include <unistd.h>
 
 static struct option long_opt[] = {
         {"depth",0,0,'d'},
         {"name",0,0,'n'},
         {0,0,0,0}
 };
+int PATH_MAX = 1000;
 
 int find (char* path){
     DIR* dir = opendir(path);
     struct dirent* entry = readdir(dir);
+    struct stat* info;
+    char pathName[PATH_MAX];
     if (dir == NULL)
         perror("Problem with open file!");
 
     while (entry != NULL){
-        printf("%s",entry->d_name);
+        (void)strncpy( pathName, theDir, PATH_MAX );
+        (void)strncat( pathName, "/", PATH_MAX );
+        (void)strncat( pathName, entry.d_name, PATH_MAX );
+        if (lstat(entry->d_name,info) < 0)
+            perror("Problem with stat");
+        if(S_ISDIR(info->st_mode) == 1)
+            printf("It is dir!\n");
+
+        printf("./%s\n",entry->d_name);
         entry = readdir(dir);
     }
 
