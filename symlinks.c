@@ -18,10 +18,10 @@ static struct option long_opt[] = {
         {0,0,0,0}
 };
 
-int find (char* path, int flag, char* name){
-    DIR* dir = opendir(path);
+int find (char* path, int flag, char* name) {
+    DIR *dir = opendir(path);
 
-    struct dirent* entry = readdir(dir);
+    struct dirent *entry = readdir(dir);
     struct stat info;
     char link = 0;
     char pathName[PATH_MAX];
@@ -29,41 +29,45 @@ int find (char* path, int flag, char* name){
     if (dir == NULL)
         perror("Problem with open file!");
 
-    while (entry != NULL){
-        (void)strncpy( pathName, path, PATH_MAX );
-        (void)strncat( pathName, "/", 1024 );
-        (void)strncat( pathName, entry->d_name, PATH_MAX );
+    while (entry != NULL) {
+        (void) strncpy(pathName, path, PATH_MAX);
+        (void) strncat(pathName, "/", 1024);
+        (void) strncat(pathName, entry->d_name, PATH_MAX);
 
-        if( ( strcmp( entry->d_name, ".") == 0 ) ||
-            ( strcmp( entry->d_name, "..") == 0 ) ) {
+        if ((strcmp(entry->d_name, ".") == 0) ||
+            (strcmp(entry->d_name, "..") == 0)) {
             entry = readdir(dir);
             continue;
         }
 
 
-        if (stat(pathName,&info) < 0)
+        if (stat(pathName, &info) < 0)
             perror("Problem with stat");
 
-        if (flag == 0)
+        if (flag == 1)
             printf("%s \n", pathName);
-            if (S_ISDIR(info.st_mode) == 1)
-                find(pathName,flag, name);
+        if (S_ISDIR(info.st_mode) == 1)
+            find(pathName, flag, name);
 
         if (flag == 2)
-            if(strcmp(pathName,name) == 1) {
+            if (strcmp(pathName, name) == 1) {
                 printf("%s \n", pathName);
                 return 0;
             }
 
-        //if (flag == 1) {
-            //if (S_ISLNK(info.st_mode) == 1) {
-                //symlink(pathName, &link);
-            //}
+        if (flag == 0) {
+            printf("%s \n", pathName);
+            if ((info.st_mode &  S_IFMT) == S_IFLNK) {
+                printf("Link -> %s \n", pathName);
+            }
             //printf("%s \n", pathName);
-            //printf("%d \n", link);
-        }
-        entry = readdir(dir);
+
+        //
+        //printf("%s \n", pathName);
+        //printf("%d \n", link);
     }
+    entry = readdir(dir);
+}
     closedir(dir);
     return 0;
 }
