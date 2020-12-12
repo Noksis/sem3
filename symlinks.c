@@ -23,6 +23,7 @@ int find (char* path, int flag, char* name){
 
     struct dirent* entry = readdir(dir);
     struct stat info;
+    char link = 0;
     char pathName[PATH_MAX];
 
     if (dir == NULL)
@@ -43,8 +44,8 @@ int find (char* path, int flag, char* name){
         if (stat(pathName,&info) < 0)
             perror("Problem with stat");
 
-        if (flag == 1)
-            //printf("%d",info->st_mode);
+        if (flag == 0)
+            printf("%s \n", pathName);
             if (S_ISDIR(info.st_mode) == 1)
                 find(pathName,flag, name);
 
@@ -54,9 +55,13 @@ int find (char* path, int flag, char* name){
                 return 0;
             }
 
-        if (flag == 0)
-            printf("%s \n", pathName);
-
+        //if (flag == 1) {
+            //if (S_ISLNK(info.st_mode) == 1) {
+                //symlink(pathName, &link);
+            //}
+            //printf("%s \n", pathName);
+            //printf("%d \n", link);
+        }
         entry = readdir(dir);
     }
     closedir(dir);
@@ -72,6 +77,7 @@ int main(int argc, char** argv) {
         printf("Error! No arguments!\n");
         return 0;
     }
+    printf("%s\n",path);
 
     int code = 0;
     int flag = 0;
