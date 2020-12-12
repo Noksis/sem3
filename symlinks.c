@@ -33,6 +33,13 @@ int find (char* path, int flag, char* name){
         (void)strncat( pathName, "/", 1024 );
         (void)strncat( pathName, entry->d_name, PATH_MAX );
 
+        if( ( strcmp( entry->d_name, ".") == 0 ) ||
+            ( strcmp( entry->d_name, "..") == 0 ) ) {
+            entry = readdir(dir);
+            continue;
+        }
+
+
         if (stat(pathName,&info) < 0)
             perror("Problem with stat");
 
